@@ -9,7 +9,7 @@ import flet as ft
 
 def main(pagina):
 
-    texto = ft.Text(" Chat do Jaguar ")
+    texto = ft.Text(" JaguarChat ")
 
     chat = ft.Column()
     
@@ -28,7 +28,7 @@ def main(pagina):
             chat.controls.append(ft.Text(f"{usuario_mensagem }: {texto_mensagem}"))
         else: 
              usuario_mensagem = mensagem["usuario"]
-             chat.controls.append(ft.Text(f"{usuario_mensagem } entrou no chat", size=15, italic=True,  color=ft.colors.BLUE_700))
+             chat.controls.append(ft.Text(f"{usuario_mensagem } entrou no chat", size=15, italic=True,  color=ft.colors.YELLOW_600))
         pagina.update()
 
 
@@ -54,24 +54,22 @@ def main(pagina):
         # fechar o popup
         popup.open = False
         pagina.update()
-        
+    
         # remover o botão de iniciar o chat
         pagina.remove(botao_iniciar)
-
+        pagina.remove(texto)
         # criar o campo da mensagem do usuário 
-
         pagina.add(ft.Row(
-
             [
                 campo_mensagem, botoa_enviar_mensagem
             ]
 
         ))
-
         pagina.add(campo_mensagem)
 
         # criar o botão de enviar mensagem do usuário
         pagina.add(botoa_enviar_mensagem)
+        pagina.update()
 
     popup = ft.AlertDialog(
         open=False, 
