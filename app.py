@@ -5,6 +5,7 @@
     # O campo e o botão de enviar mensagem
 # A cada mensagem que você envia : Aparece para todo mundo
     # Nome: Texto da mensagem
+
 import flet as ft 
 
 def main(pagina):
