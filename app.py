@@ -6,12 +6,6 @@
 # A cada mensagem que você envia : Aparece para todo mundo
     # Nome: Texto da mensagem
 
-import inspect
-
-# Monkey patch se necessário
-if not hasattr(inspect, 'getargspec'):
-    inspect.getargspec = inspect.getfullargspec
-
 import flet as ft 
 
 def main(pagina):
