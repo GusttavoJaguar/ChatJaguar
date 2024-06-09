@@ -10,14 +10,6 @@ import flet as ft
 
 def main(pagina):
 
-    # Seu código do AdSense
-    codigo_adsense = """
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5907630328936909"
-     crossorigin="anonymous"></script>"""
-
-    # Adicionando o código do AdSense entre as tags <head></head>
-    pagina.add(ft.Html(f"<head>{codigo_adsense}</head>"))
-
     texto = ft.Text(" JaguarChat ")
 
     chat = ft.Column()
